@@ -22,10 +22,10 @@ const ItemList = ({ items }) => {
 
   return (
     <div>
-      <div className="flex space-x-4 mb-4">
+      <div className="flex space-x-4 m-4 max-w-md mx-auto ">
         <button
           onClick={() => setSortBy('name')}
-          className={`px-3 py-2 border rounded-md ${
+          className={`px-3 py-2 border rounded-md p-4 ${
             sortBy === 'name' ? 'bg-red-300 border-blue-500' : 'border-gray-300'
           }`}
         >
@@ -48,7 +48,7 @@ const ItemList = ({ items }) => {
           Group by Category
         </button>
       </div>
-      <ul className="space-y-4">
+      <ul className="space-y-4 mb-4 place-items-center " >
         {sortBy === 'group'
           ? Object.entries(
               sortedItems.reduce((acc, item) => {
@@ -58,7 +58,7 @@ const ItemList = ({ items }) => {
               }, {})
             ).map(([category, items]) => (
               <div key={category}>
-                <h3 className="capitalize text-xl font-bold">{category}</h3>
+                <h3 className="capitalize text-xl font-bold text-center">{category}</h3>
                 {items.sort((a, b) => a.name.localeCompare(b.name)).map((item, index) => (
                   <Item key={index} name={item.name} quantity={item.quantity} category={item.category} />
                 ))}
