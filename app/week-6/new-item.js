@@ -17,7 +17,7 @@ export default function NewItem({ onAddItem }) {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="p-4 max-w-md mx-auto bg-yellow-50 shadow-md rounded-lg">
+    <form onSubmit={handleSubmit} className="w-1/4 p-4 max-w-md mx-auto bg-yellow-50 shadow-md rounded-lg">
       <div className="mb-4">
         <label className="block text-gray-700 font-bold mb-2" htmlFor="name">
           Name
