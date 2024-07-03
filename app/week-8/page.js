@@ -45,7 +45,7 @@ export default function HomePage() {
                         <p className="text-gray-700 mb-2">Welcome, {user.displayName} ({user.email})</p>
                         <button
                             onClick={handleSignOut}
-                            className="bg-red-300 text-white px-4 py-2 rounded-md w-full"
+                            className="bg-red-300 text-black px-4 py-2 rounded-md w-full"
                         >
                             Logout
                         </button>
